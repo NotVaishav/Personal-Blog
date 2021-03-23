@@ -14,7 +14,7 @@ from dotenv import load_dotenv
 
 load_dotenv(r"F:\Development\EnvironmentVariables\.env.txt")
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY")
+app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY", "My_Secret_key")
 ckeditor = CKEditor(app)
 Bootstrap(app)
 login_manager = LoginManager()
@@ -62,7 +62,7 @@ class Comment(db.Model):
     text = db.Column(db.String(250), nullable=False)
 
 
-# db.create_all()
+db.create_all()
 
 
 def admin_only(f):
