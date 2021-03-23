@@ -12,9 +12,9 @@ from functools import wraps
 import os
 from dotenv import load_dotenv
 
-load_dotenv(r"F:\Development\EnvironmentVariables\.env.txt")
+# load_dotenv(r"F:\Development\EnvironmentVariables\.env.txt")
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.getenv("My_Secret_key")
+app.config['SECRET_KEY'] = "8BYkEfBA6O6donzWlSihBXox7C0sKR6b"
 ckeditor = CKEditor(app)
 Bootstrap(app)
 login_manager = LoginManager()
