@@ -14,7 +14,7 @@ from dotenv import load_dotenv
 
 load_dotenv(r"F:\Development\EnvironmentVariables\.env.txt")
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY", "My_Secret_key")
+app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY")
 ckeditor = CKEditor(app)
 Bootstrap(app)
 login_manager = LoginManager()
